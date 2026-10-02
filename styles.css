@@ -64,7 +64,17 @@
 }
 
 .audio-recorder-pill:hover {
-	background-color: var(--background-modifier-hover);
+	/* The hover colour is translucent: layer it over the opaque background
+	   so the note text underneath doesn't show through. */
+	background-image: linear-gradient(
+		var(--background-modifier-hover),
+		var(--background-modifier-hover)
+	);
+	border-color: var(--background-modifier-border-hover);
+}
+
+.audio-recorder-pill:hover .audio-recorder-expand {
+	color: var(--text-muted);
 }
 
 .audio-recorder-pill:focus-visible {
@@ -112,7 +122,11 @@
 .is-mobile .audio-recorder-mic:active {
 	opacity: 1;
 	color: var(--text-normal);
-	background-color: var(--background-modifier-hover);
+	background-color: var(--background-secondary);
+	background-image: linear-gradient(
+		var(--background-modifier-hover),
+		var(--background-modifier-hover)
+	);
 }
 
 .is-mobile .audio-recorder-pill {
