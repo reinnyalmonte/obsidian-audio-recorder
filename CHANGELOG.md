@@ -6,6 +6,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [0.1.2] - 2026-10-02
+
+### Fixed
+
+- The recorder dialog no longer shows Obsidian's close button out of line with the header on Obsidian 1.13 and later.
+
 ## [0.1.1] - 2026-09-24
 
 ### Fixed

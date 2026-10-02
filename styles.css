@@ -146,6 +146,7 @@
 }
 
 .audio-recorder-modal .modal-close-button,
+.audio-recorder-modal .modal-header-button,
 .audio-recorder-modal .modal-header,
 .audio-recorder-modal .modal-title {
 	display: none;
