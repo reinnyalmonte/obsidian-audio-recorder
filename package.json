@@ -1,7 +1,7 @@
 {
 	"name": "minimalist-audio-recorder",
 	"packageManager": "pnpm@10.33.0",
-	"version": "0.1.2",
+	"version": "0.2.0",
 	"description": "A small floating button for recording voice notes into notes that match a folder or tag.",
 	"main": "main.js",
 	"type": "module",
