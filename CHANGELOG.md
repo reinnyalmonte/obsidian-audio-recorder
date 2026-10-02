@@ -6,6 +6,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+### Added
+
+- The plugin's settings show up in Obsidian's settings search (Obsidian 1.13 and later).
+- The **Folder** and **Recordings folder** settings suggest folders from your vault as you type (Obsidian 1.13 and later).
+
 ## [0.1.2] - 2026-10-02
 
 ### Fixed

@@ -1,5 +1,6 @@
 import { Plugin } from 'obsidian';
-import { AudioRecorderSettings, AudioRecorderSettingTab, loadSettings } from './settings';
+import { AudioRecorderSettings, loadSettings } from './settings';
+import { AudioRecorderSettingTab } from './ui/settings-tab';
 import { registerCommands } from './commands';
 import { RecordingController } from './recording-controller';
 
