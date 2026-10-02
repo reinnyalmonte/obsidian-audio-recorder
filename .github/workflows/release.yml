@@ -46,7 +46,19 @@ jobs:
               run: |
                   tag="${GITHUB_REF#refs/tags/}"
 
+                  # Release notes are the CHANGELOG.md section for this version.
+                  awk -v tag="$tag" '
+                    index($0, "## [" tag "]") == 1 { found = 1; next }
+                    found && /^## \[/ { exit }
+                    found { print }
+                  ' CHANGELOG.md | sed '/./,$!d' > notes.md
+                  if [ ! -s notes.md ]; then
+                    echo "No '## [$tag]' section in CHANGELOG.md" >&2
+                    exit 1
+                  fi
+
                   gh release create "$tag" \
                     --title="$tag" \
+                    --notes-file notes.md \
                     --draft \
                     main.js manifest.json ${{ steps.styles.outputs.exists == 'true' && 'styles.css' || '' }}
